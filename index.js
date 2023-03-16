@@ -3,6 +3,19 @@
 const sidemenu= document.querySelector(".sidemenu");
 const btnopen = document.querySelector(".fa-sharp.fa-solid.fa-bars");
 const btnclose = document.querySelector(".fa-sharp.fa-solid.fa-xmark");
+const fb = document.querySelector(".nav-btn.feedback");
+const dnt = document.querySelector('.fas.fa-hand-holding-usd');
+const fbclose = document.querySelector('.feedbackclose');
+const confb = document.querySelector('.con-feedback');
+const dntclose = document.querySelector('.donationclose');
+const dntfb = document.querySelector('.con-donation');
+const wrapper = document.querySelector(".wrapper"),
+  carousel = document.querySelector(".carousel"),
+  images = document.querySelectorAll("img"),
+  buttons = document.querySelectorAll(".button");
+
+let imageIndex = 1,
+  intervalId;
 btnopen.addEventListener('click',function(){
   if(!sidemenu.classList.contains(".show-sidemenu")){
   sidemenu.classList.add("show-sidemenu");
@@ -14,14 +27,6 @@ btnclose.addEventListener('click',function(){
 }
 });
 
-
-
-const fb = document.querySelector(".nav-btn.feedback");
-const dnt = document.querySelector('.nav-btn.donate');
-const fbclose = document.querySelector('.feedbackclose');
-const confb = document.querySelector('.con-feedback');
-const dntclose = document.querySelector('.donationclose');
-const dntfb = document.querySelector('.con-donation');
 fb.addEventListener('click',function(){
     console.log("feedback button pressed");
     console.log(confb.classList);
@@ -53,13 +58,7 @@ dntclose.addEventListener('click',function(){
 });
 //.container- for slider
 // Get the DOM elements for the image carousel
-const wrapper = document.querySelector(".wrapper"),
-  carousel = document.querySelector(".carousel"),
-  images = document.querySelectorAll("img"),
-  buttons = document.querySelectorAll(".button");
 
-let imageIndex = 1,
-  intervalId;
 
 // Define function to start automatic image slider
 const autoSlide = () => {

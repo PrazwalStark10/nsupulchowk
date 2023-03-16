@@ -580,4 +580,7 @@ width: 100vw;
     left: 25px; 
     cursor: pointer;
   }
+  .con-feedback .container{
+    width:80%;
+  }
 }
