@@ -347,7 +347,7 @@ width: 100vw;
     box-shadow: var(--dark-shadow);
   }
   #message .container2{
-    flex-basis: 50%;
+    flex-basis: 70%;
     padding-left:5%;
     padding-right: 5%;
     font-family:var(--ff--third);
@@ -377,7 +377,7 @@ width: 100vw;
     flex-wrap: wrap; 
 } 
 .col1{ 
-  flex-basis: 40%; 
+  flex-basis: 38%; margin-right: 2%;
 } 
 .col1 img{ 
     width: 100%; 
@@ -385,8 +385,8 @@ width: 100vw;
     border-radius: 15px; 
 } 
 .col2{ 
-    flex-basis:65%; 
-    /* margin-left: 2%; */
+    flex-basis:60%; 
+    /* margin-left: 3px; */
     line-height: 45px;
     /* margin: 5px; */
 }
@@ -404,6 +404,13 @@ width: 100vw;
 }
 .col2 .sub-title{
   line-height: 60px;
+}
+.col2 a{
+  text-decoration: none;
+  color: rgb(91, 93, 95);
+}
+.col2 a:hover{
+  color: blueviolet;
 }
   /* Now for slider sectioin */
   #slider{
@@ -500,5 +507,8 @@ nav .fa-sharp{
   .aboutcontainer{
     display: block;
     margin: 10px 20px;
+  }
+  .sidemenu li{
+    display: none;
   }
 }
