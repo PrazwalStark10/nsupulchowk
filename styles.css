@@ -60,7 +60,7 @@ body{
 }
 /*----------------------- hero : first page of the website----------------------------- */
 #hero{
-    background: url("images/bg.png");
+    background-image: url("images/bg.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -510,5 +510,21 @@ nav .fa-sharp{
   }
   .sidemenu li{
     display: none;
+  }
+  #hero{
+    background-image: url("images/phonebg.png");
+    background-size: cover;
+  }
+  .header-text{
+    height: 90vh;
+    align-items: center;
+    margin-top: 85% !important;
+    font-family: var(--ff--third);
+    font-size:20px;
+    margin:20px;
+    color:white;
+  }
+  .nav{
+    height: 10vh;
   }
 }
