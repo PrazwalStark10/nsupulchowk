@@ -74,50 +74,63 @@ width: 100vw;
 }
 /* ---------navgation: here we state the menus and links to different blocks------ */
 .nav{
-    background-color: var(--clr-primary-5);
-    width: 100vw;
-    height: 10vh;
-    /* margin-right: 10px;
-    margin-right: 10px; */
     display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
     justify-content: space-between;
+    background-color: var(--clr-primary-5);
     box-shadow: var(--dark-shadow);
+    height: 10vh;
 }
 .logo{
     width:auto;
     padding-left: 30px;
     height:75px;
 }
-.sidemenu{
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
+
+#sidemenu li{
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    margin:10px 20px;
+    letter-spacing: var(--spacing);
+    color: white;
     font-family: var(--ff-primary);
     font-size: medium;
     font-weight: 550;
-    list-style-type: none;
-}
-.sidemenu li{
-    cursor: pointer;
-    letter-spacing: var(--spacing);
-    color: white;
-    padding-right: 30px;
+    text-transform: uppercase;
     transition: var(--transition);
 }
 
-.sidemenu li:hover{
-    color: rgb(4, 40, 116);
-    /* text-shadow: 0 5px 15px rgba(255, 255, 255, 0.275); */
-}
-.sidemenu li a{
+
+#sidemenu li a{
   padding-right: 10px;
   color: white;
   text-decoration: none;
+  position: relative;
   transition: var(--transition);
 }
-.sidemenu li a:hover{
+#sidemenu li a:hover{
   color: rgb(4, 40, 116);
-  /* text-shadow: 0 5px 15px rgba(255, 255, 255, 0.275); */
+}
+.nav ul li a::after{
+  content:'';
+  width: 0;
+  height:3px;
+  background:#ff004f;
+  position:absolute;
+  left:0;
+  bottom:-6px;
+  transition: var(--transition);
+}
+.nav ul li a:hover::after{
+  width:100%;
+}
+.nav .feedback:hover::after{
+  width:0%;
+}
+.nav .fa-sharp{
+  display:none;
 }
 .feedback{
     letter-spacing: 2px;
@@ -169,7 +182,8 @@ width: 100vw;
     background:rgb(255, 255, 255);
     box-shadow: var(--light-shadow);
     margin: auto;
-    width:auto;
+    width:50%;
+    height: 80%;
     padding: 10px 20px;
     display: block;
     text-align: center;
@@ -492,9 +506,7 @@ width: 100vw;
 .copyright i{ 
     color:#ffffff; 
 } 
-nav .fa-sharp{ 
-    display:none; 
-} 
+
 
 @media only screen and (max-width:600px) {
   #message .container2{
@@ -507,9 +519,6 @@ nav .fa-sharp{
   .aboutcontainer{
     display: block;
     margin: 10px 20px;
-  }
-  .sidemenu li{
-    display: none;
   }
   #hero{
     background-image: url("images/phonebg.png");
@@ -525,6 +534,48 @@ nav .fa-sharp{
     color:white;
   }
   .nav{
-    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+  }
+  #sidemenu{ 
+    background:#048234;
+    display: block;
+    position:fixed;
+    top:0; 
+    right: 0;
+    /* right:-200px;  */
+    width:200px; 
+    height:100vh; 
+    padding-top:40px; 
+    z-index:4; 
+    transition: var(--transition); 
+} 
+  .nav .fa-xmark{
+    display:block;
+    font-size:30px;
+    color: white;
+  }
+  .nav .fa-bars{
+    position: fixed;
+    font-size:30px;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    color:#ff004f;
+  }
+  .nav {
+    display: block;
+    font-size: 20px;
+  }
+  
+.nav ul li{ 
+    display:block; 
+    margin:30px !important; 
+} 
+.nav .fa-xmark{ 
+    position: absolute; 
+    top: 10px; 
+    left: 25px; 
+    cursor: pointer;
   }
 }

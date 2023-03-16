@@ -1,4 +1,6 @@
 // for modal of feedback and donation
+
+
 const fb = document.querySelector(".nav-btn.feedback");
 const dnt = document.querySelector('.nav-btn.donate');
 const fbclose = document.querySelector('.feedbackclose');
@@ -78,4 +80,3 @@ buttons.forEach((button) => button.addEventListener("click", updateClick));
 wrapper.addEventListener("mouseover", () => clearInterval(intervalId));
 // Add mouseleave event listener to wrapper element to start auto sliding again
 wrapper.addEventListener("mouseleave", autoSlide);
-

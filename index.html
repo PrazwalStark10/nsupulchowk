@@ -24,14 +24,15 @@
         <div class="container">
             <div class="nav">
                 <img src="images/logo.png" alt="logo" class="logo">
-            
-                <ul class="sidemenu">
+                <i class="fa-sharp fa-solid fa-bars" onclick="openmenu()"></i>
+                <ul id="sidemenu">
                     <li><a href="#hero"><i class="fa fa-home"></i></a></li>
                     <li><a href="#message"><i class="fa-solid fa-message"></i></a></li>
                     <li><a href="#about">President</a></li>
                     <li><a href="manifesto.html">Manifesto</a></li>
                     <li><button class="nav-btn feedback">feedback</button></li>
-                    <li><button class="nav-btn donate"><i class='fas fa-hand-holding-usd'></i></button></li>
+                    <li><a><i class='fas fa-hand-holding-usd'></i></a></li>
+                    <i class="fa-sharp fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
             </div>
             <div class="header-text">
@@ -39,6 +40,7 @@
             </div>
         </div>
     </div>
+    
 
 
 
@@ -131,6 +133,15 @@
         <p> Copyright © PrazwalStark <i class="fa-sharp fa-solid fa-fire"></i> </p> 
     </div>
      <!-- javascript -->
+     <script>
+        var sidemenu= document.getElementById("sidemenu");
+function openmenu(){ 
+sidemenu.style.right = "0"; 
+} 
+function closemenu(){ 
+sidemenu.style.right = "-200px"; 
+} 
+     </script>
      <script src="index.js"></script>
 </body>
 </html>
