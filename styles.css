@@ -88,7 +88,7 @@ width: 100vw;
     height:75px;
 }
 
-#sidemenu li{
+.sidemenu li{
     display: inline-block;
     list-style: none;
     cursor: pointer;
@@ -103,14 +103,14 @@ width: 100vw;
 }
 
 
-#sidemenu li a{
+.sidemenu li a{
   padding-right: 10px;
   color: white;
   text-decoration: none;
   position: relative;
   transition: var(--transition);
 }
-#sidemenu li a:hover{
+.sidemenu li a:hover{
   color: rgb(4, 40, 116);
 }
 .nav ul li a::after{
@@ -537,19 +537,21 @@ width: 100vw;
     display: flex;
     justify-content: space-between;
   }
-  #sidemenu{ 
+  .sidemenu{ 
     background:#048234;
     display: block;
     position:fixed;
     top:0; 
-    right: 0;
-    /* right:-200px;  */
+    right: -200px;
     width:200px; 
     height:100vh; 
     padding-top:40px; 
     z-index:4; 
     transition: var(--transition); 
 } 
+.show-sidemenu{
+  right:0; 
+}
   .nav .fa-xmark{
     display:block;
     font-size:30px;

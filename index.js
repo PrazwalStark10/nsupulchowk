@@ -1,5 +1,20 @@
 // for modal of feedback and donation
 
+const sidemenu= document.querySelector(".sidemenu");
+const btnopen = document.querySelector(".fa-sharp.fa-solid.fa-bars");
+const btnclose = document.querySelector(".fa-sharp.fa-solid.fa-xmark");
+btnopen.addEventListener('click',function(){
+  if(!sidemenu.classList.contains(".show-sidemenu")){
+  sidemenu.classList.add("show-sidemenu");
+}
+});
+btnclose.addEventListener('click',function(){
+  if(sidemenu.classList.contains("show-sidemenu")){
+  sidemenu.classList.remove("show-sidemenu");
+}
+});
+
+
 
 const fb = document.querySelector(".nav-btn.feedback");
 const dnt = document.querySelector('.nav-btn.donate');
