@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://kit.fontawesome.com/d5eba3bbdb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+<body>
+
+
+    <!------------------Defining the home page of the site---------------------------->
+
+
+
+    <div id="hero">
+        <div class="container">
+            <div class="nav">
+                <img src="images/logo.png" alt="logo" class="logo">
+            
+                <ul class="sidemenu">
+                    <li><a href="#hero"><i class="fa fa-home"></i></a></li>
+                    <li><a href="#message"><i class="fa-solid fa-message"></i></a></li>
+                    <li><a href="#about">President</a></li>
+                    <li><a href="manifesto.html">Manifesto</a></li>
+                    <li><button class="nav-btn feedback">feedback</button></li>
+                    <li><button class="nav-btn donate"><i class='fas fa-hand-holding-usd'></i></button></li>
+                </ul>
+            </div>
+            <div class="header-text">
+                <h1 class="nsu">Nepal Student's Union</h1><span class="pcu">Pulchowk Campus Unit</span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ------here foes all the modal containers for the donation and feedback option ------------>
+
+
+
+
+    <div class="con-feedback">
+        <div class="container">
+            <button class="feedbackclose"><i class="fa fa-close"></i></button>
+            <h1>SAVE IOE</h1>
+            <form name="submit-to-google-sheet">
+                <textarea name="Message" cols="30" rows="3" placeholder="Your Problems" required></textarea>
+                <textarea name="Message" cols="30" rows="5" placeholder="What could be your solution to these problems?"></textarea>
+                <button type="submit" class="sub-btn2">SUBMIT</button>
+            </form>
+          </div>
+    </div>
+    <div class="con-donation">
+        <div class="containers">
+        <button class="donationclose"><i class="fa fa-close"></i></button>
+          <div class="container container1">
+            <img src="images\khalti.jpg" alt="KHALTI">
+            <span class="text">KHALTI</span>
+          </div>
+          <div class="container container2">
+            <img src="images\bank.jpg" alt="BANK">
+            <span class="text">BANK</span>
+          </div>
+        </div>
+    </div>
+
+
+    <!---------Now After the home page we are going to send our video message in the website-------->
+    <div id="message">
+        <div class="containers">
+        <div class="container1">
+        <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2FofficialNSUPulchowk%2Fvideos%2F608146781168671%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+        </div>
+        <div class="container2">
+            <span class="text">
+            "There may be times when we are powerless to reform IOE but there must never be a time when we fail to protest the distortions inside IOE."<br><br>#SaveIOE #VOTEFORNSU #FSUELECTION
+            </span>
+        </div>
+    </div>
+    </div>
+
+    <!--------- Hence we move forward to about section ------->
+    <div id="about"> 
+        <div class="aboutcontainer"> 
+                    <div class="col1"> 
+                        <img src="images/user.png"> 
+                    </div> 
+                    <div class="col2"> 
+                        <h1 class="sub-title">Shankar Panthee</h1><br> 
+                        <span clas="FSU">FSU PRESIDENT CANDIDATE</span><br>
+                        <span class="PCNSU">NSU, Pulchowk Campus</span><br>
+                        <span class="AD">5th Year Architecture Department</span><br>
+                     <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a> 
+                     <a href="https://twitter.com/"><i class="fa-brands fa-square-twitter"></i></a> 
+                     <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a> 
+                     <a href="https://www.instagram.com/eyy_shankar/"><i class="fa-brands fa-square-instagram"></i></a> 
+                     <a href="https://www.facebook.com/profile.php?id=100087220405707"><i class="fa-brands fa-square-facebook"></i></a> 
+                    </div> 
+        </div> 
+    </div>
+    <!--- ABOUT-------------->
+    <div id="slider">
+        <section class="wrapper">
+            <i class="fa-solid fa-arrow-left button" id="prev"></i>
+            <div class="image-container">
+              <div class="carousel">
+                <img src="images\slider\0.jpg" alt="" />
+                <img src="images\slider\1.jpg" alt="" />
+                <img src="images\slider\2.jpg" alt="" />
+                <img src="images\slider\3.jpg" alt="" />
+                <img src="images\slider\4.jpg" alt="" />
+                <img src="images\slider\5.jpg" alt="" />
+                <img src="images\slider\6.jpg" alt="" />
+                <img src="images\slider\7.jpg" alt="" />
+                <img src="images\slider\8.jpg" alt="" />
+                <img src="images\slider\9.jpg" alt="" />
+              </div>
+              <i class="fa-solid fa-arrow-right button" id="next"></i>
+            </div>
+          </section>
+    </div>
+    <div class="copyright"> 
+        <p>Copyright © PrazwalStark <i class="fa-sharp fa-solid fa-fire"></i> </p> 
+    </div>
+     <!-- javascript -->
+     <script src="index.js"></script>
+</body>
+</html>
+<!-- <video width="320" height="240" controls>
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video> -->
