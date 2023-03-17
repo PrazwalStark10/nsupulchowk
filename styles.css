@@ -340,14 +340,14 @@ width: 100vw;
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
-  .manifesto{
+  .header-text .manifesto{
     background-color: #ff004f;
     border: 1px solid white;
     border-radius: 10px;
     padding: 5px 10px;
     transition: var(--transition);
   }
-  .manifesto a{
+  .header-text .manifesto a{
     text-decoration: none;
     color: white;
     font-size: 25px;
@@ -356,11 +356,13 @@ width: 100vw;
     letter-spacing: var(--spacing);
     transition: var(--transition);
   }
-  .manifesto:hover{
+
+  .header-text .manifesto:hover{
     background-color: white;
     border:1px solid #ff004f;
   }
-  .manifesto a:hover{
+
+  .header-text .manifesto a:hover{
     color: #ff004f;
   }
 
@@ -372,6 +374,7 @@ width: 100vw;
     margin: auto;
     display: block;
   }
+
   #message .container{
     width: 800px;
     height:450px;
