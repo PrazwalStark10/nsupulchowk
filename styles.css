@@ -338,7 +338,29 @@ width: 100vw;
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
-
+  .manifesto{
+    background-color: #ff004f;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    transition: var(--transition);
+  }
+  .manifesto a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    transition: var(--transition);
+  }
+  .manifesto:hover{
+    background-color: white;
+    border:1px solid #ff004f;
+  }
+  .manifesto a:hover{
+    color: #ff004f;
+  }
 
   /*--------------Now moving forward to message section -------------------------------------------*/
   #message{
@@ -572,5 +594,8 @@ width: 100vw;
   #message .container{
     width: 300px;
     height: 169px;
+  }
+  .manifesto a{
+    font-size:15px ;
   }
 }
