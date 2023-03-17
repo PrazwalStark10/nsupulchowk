@@ -13,7 +13,10 @@ const wrapper = document.querySelector(".wrapper"),
   carousel = document.querySelector(".carousel"),
   images = document.querySelectorAll("img"),
   buttons = document.querySelectorAll(".button");
-
+const btnmanifesto = document.querySelector(".manifesto");
+  btnmanifesto.addEventListener("click", function() {
+    window.location.href = "manifesto.html";
+  });
 let imageIndex = 1,
   intervalId;
 btnopen.addEventListener('click',function(){
