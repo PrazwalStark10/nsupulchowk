@@ -344,33 +344,19 @@ width: 100vw;
   #message{
     padding: 50px 30px;
     height:auto;
+    width: 100vw;
+    margin: auto;
+    display: block;
   }
-  #message .containers{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: no-wrap;
+  #message .container{
+    width: 800px;
+    height:450px;
+    max-width: 800px; 
+    margin: auto;
   }
-  #message .container1{
-    width: 315px;
-    height:560px;
-    /* box-shadow: var(--light-shadow); */
-    flex-basis: auto;
-  }
-  #message .container1 iframe{
+  #message iframe{
     border-radius: 15px;
     box-shadow: var(--dark-shadow);
-  }
-  #message .container2{
-    flex-basis: 70%;
-    padding-left:5%;
-    padding-right: 5%;
-    font-family:var(--ff--third);
-    font-size:x-large;
-    height: 100%;
-    letter-spacing: var(--spacing);
-    font-weight: 600;
-    color: rgb(8, 66, 86);
-    text-transform: uppercase;
   }
 
 
@@ -582,5 +568,9 @@ width: 100vw;
   }
   .con-feedback .container{
     width:80%;
+  }
+  #message .container{
+    width: 300px;
+    height: 169px;
   }
 }
