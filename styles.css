@@ -524,7 +524,9 @@ width: 100%;
 .count {
   margin-top: 5px;
   place-content: center;
-  display: flex;
+  display: inline-flex;
+  /* display: block; */
+  /* display: flex; */line-height: 15px;
 }
 
 @media only screen and (max-width:600px) {
