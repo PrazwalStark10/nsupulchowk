@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JSCBWS0FN2"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-260918477-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-JSCBWS0FN2');
+  gtag('config', 'UA-260918477-1');
 </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,24 +24,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
 </head>
 <body>
-
-
-    <!------------------Defining the home page of the site---------------------------->
-
-
-
     <div id="hero">
         <div class="container">
             <div class="nav">
                 <img src="images/logo.png" alt="logo" class="logo">
                 <i class="fa-sharp fa-solid fa-bars"></i>
                 <ul class="sidemenu">
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
                     <li><a href="#hero"><i class="fa fa-home"></i></a></li>
                     <li><a href="#message"><i class="fa-solid fa-message"></i></a></li>
                     <li><a href="#about">President</a></li>
                     <li><button class="nav-btn feedback">feedback</button></li>
                     <li><a><i class='fas fa-hand-holding-usd'></i></a></li>
-                    <i class="fa-sharp fa-solid fa-xmark"></i>
                 </ul>
             </div>
             <div class="header-text">
@@ -49,15 +44,9 @@
             </div>
         </div>
     </div>
+
+
     
-
-
-
-    <!-- ------here foes all the modal containers for the donation and feedback option ------------>
-
-
-
-
     <div class="con-feedback">
         <div class="container">
             <button class="feedbackclose"><i class="fa fa-close"></i></button>
@@ -132,10 +121,38 @@
           </section>
     </div>
     <div class="copyright"> 
-        <p> Copyright © PrazwalStark <i class="fa-sharp fa-solid fa-fire"></i> </p> 
+        <p> Copyright © PrazwalStark <i class="fa-sharp fa-solid fa-fire"></i> </p><br>Visited:<div id="views-count"></div>
     </div>
 <!-------------------------javascript---------------->
-
+<script>
+    // Replace with your own Google Analytics Tracking ID
+    var GA_TRACKING_ID = 'UA-260918477-1';
+  
+    // Replace with the URL path of the page you want to track
+    var PAGE_PATH = 'index.html';
+  
+    // Load the Google Analytics Reporting API
+    gapi.analytics.ready(function() {
+  
+      // Create a new report object for the Pageviews metric
+      var report = new gapi.analytics.report.Data({
+        query: {
+          ids: 'ga:' + GA_TRACKING_ID,
+          dimensions: 'ga:pagePath',
+          metrics: 'ga:pageviews',
+          filters: 'ga:pagePath==' + PAGE_PATH
+        }
+      });
+  
+      // Execute the report query and display the results
+      report.execute().then(function(response) {
+        var viewsCount = response.totalsForAllResults['ga:pageviews'];
+        document.getElementById('views-count').textContent = viewsCount;
+      });
+  
+    });
+  </script>
+  <!-- Add this element to your HTML to display the views count -->
 <script src="index.js"></script>
 </body>
 </html>

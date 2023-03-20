@@ -61,7 +61,7 @@ body{
 /*----------------------- hero : first page of the website----------------------------- */
 #hero{
     background-image: url("images/bg.png");
-    background-size: cover;
+    background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -69,24 +69,25 @@ body{
 }
 .container{
 display: block;
-height: 100vh;
-width: 100vw;
+height: 100%;
+width: 100%;
 }
 /* ---------navgation: here we state the menus and links to different blocks------ */
 
 .nav{
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     align-items: center;
     justify-content: space-between;
-    background-color: var(--clr-primary-5);
-    box-shadow: var(--dark-shadow);
+    /* background-color: var(--clr-primary-5); */
+    background-color: transparent;
+    /* box-shadow: var(--dark-shadow); */
     height: 10vh;
 }
 
 .logo{
     width:auto;
-    padding-left: 30px;
+    padding-left: 15px;
     height:75px;
 }
 
@@ -94,7 +95,7 @@ width: 100vw;
     display: inline-block;
     list-style: none;
     cursor: pointer;
-    margin:10px 20px;
+    padding:10px 20px;
     letter-spacing: var(--spacing);
     color: white;
     font-family: var(--ff-primary);
@@ -104,9 +105,8 @@ width: 100vw;
     transition: var(--transition);
 }
 
-
 .sidemenu li a{
-  padding-right: 10px;
+  /* padding-right: 10px; */
   color: white;
   text-decoration: none;
   position: relative;
@@ -126,7 +126,11 @@ width: 100vw;
   transition: var(--transition);
 }
 .nav ul li a:hover::after{
-  width:100%;
+  width:98%;
+}
+.sidemenu .fas, .fa, .fa-solid{
+  /* display: none; */
+  font-size: 20px;
 }
 .nav .feedback:hover::after{
   width:0%;
@@ -330,15 +334,16 @@ width: 100vw;
   /*----------------Now We will add some text at the center---------- */
 
   .header-text{
-    height: 90vh;
-    align-items: center;
-    margin-top: 20% !important;
-    font-family: var(--ff--third);
-    font-size:30px;
-    margin:20px;
-    color:white;
-    transition: var(--transition);
-    letter-spacing: var(--spacing);
+  height: 90vh;
+  align-items: center;
+  margin-top: 20% !important;
+  font-family: var(--ff--third);
+  font-size:30px;
+  margin-left:20px;
+  color:white;
+  width: auto;
+  transition: var(--transition);
+  letter-spacing: var(--spacing);
   }
   .header-text .manifesto{
     background-color: #ff004f;
@@ -365,7 +370,6 @@ width: 100vw;
     padding: 50px 30px;
     height:auto;
     width: 100vw;
-    margin: auto;
     display: block;
   }
 
@@ -384,21 +388,21 @@ width: 100vw;
 
 
 
-  #about{ 
+#about{ 
     /* padding:80px 0; */
-    width: 100vw !important;
+    width: 100vw;
     height: auto; 
 } 
 .aboutcontainer{ 
     display: flex;
     margin-top: 50px !important;
-    margin: 40px 20px; 
+    padding: 0 20px; 
     place-content: center;
     justify-content: space-between; 
     flex-wrap: wrap; 
 } 
 .col1{ 
-  flex-basis: 38%; margin-right: 2%;
+  flex-basis: 40%; padding-right: 2%;
 } 
 .col1 img{ 
     width: 100%; 
@@ -436,8 +440,8 @@ width: 100vw;
   /* Now for slider sectioin */
   #slider{
     height: 100vh;
-    width: 100%;
-    padding:80px 0;
+    width: 100vw;
+    padding:50px 0;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -503,12 +507,14 @@ width: 100vw;
     /* overflow: hidden; */
   }
   .copyright{ 
-    width:100%; 
+    width:100vw; 
+    height: auto;
     text-align:center; 
     padding: 5px 0; 
     background:#4ea1ff; 
     font-weight:300; 
     color: white;
+    line-height: 10px;
 } 
 .copyright i{ 
     color:#ffffff; 
