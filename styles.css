@@ -516,11 +516,16 @@ width: 100%;
     font-weight:300; 
     color: white;
     line-height: 10px;
+    display: block;
 } 
 .copyright i{ 
     color:#ffffff; 
 } 
-
+.count {
+  margin-top: 5px;
+  place-content: center;
+  display: flex;
+}
 
 @media only screen and (max-width:600px) {
   #message .container2{

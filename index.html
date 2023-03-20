@@ -121,37 +121,21 @@
           </section>
     </div>
     <div class="copyright"> 
-        <p> Copyright © PrazwalStark <i class="fa-sharp fa-solid fa-fire"></i> </p><br>Visited:<div id="views-count"></div>
+        <p> Copyright © PrazwalStark <i class="fa-sharp fa-solid fa-fire"></i></p><div class="count">Visited: <div id="views-count"></div> </div>
     </div>
 <!-------------------------javascript---------------->
 <script>
-    // Replace with your own Google Analytics Tracking ID
-    var GA_TRACKING_ID = 'UA-260918477-1';
-  
-    // Replace with the URL path of the page you want to track
-    var PAGE_PATH = 'index.html';
-  
-    // Load the Google Analytics Reporting API
-    gapi.analytics.ready(function() {
-  
-      // Create a new report object for the Pageviews metric
-      var report = new gapi.analytics.report.Data({
-        query: {
-          ids: 'ga:' + GA_TRACKING_ID,
-          dimensions: 'ga:pagePath',
-          metrics: 'ga:pageviews',
-          filters: 'ga:pagePath==' + PAGE_PATH
-        }
+  const countEl = document.getElementById("views-count");
+  countvisits();
+
+  function countvisits() {
+    fetch('https://api.countapi.xyz/update/prajjwalpandey.com.np/messi/?amount=1')
+      .then((res) => res.json())
+      .then((res) => {
+        countEl.innerHTML = res.value;
       });
-  
-      // Execute the report query and display the results
-      report.execute().then(function(response) {
-        var viewsCount = response.totalsForAllResults['ga:pageviews'];
-        document.getElementById('views-count').textContent = viewsCount;
-      });
-  
-    });
-  </script>
+  }
+</script>
   <!-- Add this element to your HTML to display the views count -->
 <script src="index.js"></script>
 </body>
