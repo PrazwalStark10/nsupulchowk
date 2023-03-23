@@ -1,5 +1,7 @@
-/* variables to be used for website */
-
+/* variables to be used for website*/
+/*Brown | reddish colors here are indicated as grey becasuse i first 
+implemented this style in my default color palette later modified to 
+required color. So it was found tedious to replace name instead i just changed the color😅 */
 :root {
     /* dark shades of primary color*/
     --clr-primary-1: hsl(113, 86%, 17%);    
@@ -57,6 +59,15 @@ html{
 
 body{
     background-color: var(--clr-primary-10);
+    overflow-x: hidden; 
+    /* remember the use of overflow-x is unhealty practivce 
+    of code. The reason I am using it is because there seeems to be 
+    a horizontal scroll while implenting without it. The reason could be
+    one of the child element has its width over its parent. So 
+    i just concealed the extra part since everything seems to be within 
+    viewport in terms of width! But in general cases declaring it in body
+    might hide some of your important parts! Remember to find the bug and 
+    solve manually! */
 }
 /*----------------------- hero : first page of the website----------------------------- */
 #hero{
@@ -76,7 +87,13 @@ width: 100%;
 /* ---------navgation: here we state the menus and links to different blocks------ */
 
 .nav{
+    z-index: 20;
+    overflow: hidden;
     display: flex;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
     /* flex-wrap: nowrap; */
     align-items: center;
     justify-content: space-between;
@@ -84,8 +101,11 @@ width: 100%;
     background-color: transparent;
     /* box-shadow: var(--dark-shadow); */
     height: 10vh;
+    transition: all 0.5s linear; 
 }
-
+.nav.scrolled{
+  background-color: rgba(8, 140, 87, 0.904);
+}
 .logo{
     width:auto;
     padding-left: 15px;

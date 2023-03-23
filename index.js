@@ -29,7 +29,15 @@ btnclose.addEventListener('click',function(){
   sidemenu.classList.remove("show-sidemenu");
 }
 });
-
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll',() => {
+  if (window.scrollY === 0) {
+    nav.classList.remove('scrolled');
+  }
+  else{
+    nav.classList.add('scrolled');
+  }
+});
 fb.addEventListener('click',function(){
     console.log("feedback button pressed");
     console.log(confb.classList);
